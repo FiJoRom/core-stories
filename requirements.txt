@@ -4,6 +4,7 @@ django
 labMTsimple
 # -e git+ssh://git@github.com/andyreagan/labMT-simple.git#egg=labMTsimple
 # kitchentable
+#kitchentable
 tqdm
 numpy
 #sklearn
@@ -14,3 +15,6 @@ rdflib
 #hashlib
 #integriert in Python?
 lz4
+
+#?
+marisa-trie

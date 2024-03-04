@@ -4,11 +4,16 @@ from json import loads
 from re import findall,UNICODE
 import sys
 from sys import argv
-sys.path.append("/Users/andyreagan/tools/python")
-from kitchentable.dogtoys import *
-from labMTsimple.labMTsimple.speedy import LabMT
+#brauch man das?
+#sys.path.append("/Users/andyreagan/tools/python")
+sys.path.append("/home/finn/.local/lib/python3.10/site-packages")
+
+#from labMTsimple.labMTsimple.speedy import LabMT
+from labMTsimple.speedy import LabMT
 my_LabMT = LabMT()
-from labMTsimple.labMTsimple.storyLab import *
+
+#from labMTsimple.labMTsimple.storyLab import *
+from labMTsimple.storyLab import *
 import numpy as np
 import pickle
 
@@ -17,6 +22,19 @@ sys.path.append('/Users/andyreagan/projects/2014/09-books/database')
 os.environ.setdefault('DJANGO_SETTINGS_MODULE','gutenbergdb.settings')
 import django
 django.setup()
+
+#Alternative gesucht zu:
+#from kitchentable.dogtoys import *
+
+###
+# Hinzufügen des Pfads zum kitchentable-Ordner
+kitchentable_path = os.path.join(os.path.dirname(__file__), "..", "kitchentable")
+sys.path.append(kitchentable_path)
+
+# Jetzt können Sie die Module aus dem kitchentable-Ordner importieren
+from kitchentable.dogtoys import *
+
+#####
 
 from library.models import *
 from bookclass import *
